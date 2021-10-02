@@ -159,16 +159,15 @@ section.section2 {
     display: flex;
     align-items: center;
     width: 100%;
-    padding-left: 15%;
-
+    padding-left: 15%; /* так контент не выравнивают justify-content: center; */
     background: #00c4c4;
 }
 
-section.section2__text {
+section.section2__text { /* неработает по причине что данная запись расшифровуется как :
+ только тег section у которого есть класс .section2__text */
     display: flex;
     flex-direction: column;
     width: 30%;
-
     background: #00c4c4;
 }
 
@@ -191,7 +190,6 @@ section.section2__text {
 
 .section2 img {
     display: inline-block;
-
 }
 
 
