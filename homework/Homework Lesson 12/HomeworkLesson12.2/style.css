@@ -1,0 +1,27 @@
+html {
+    font-size: 10px;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+
+    background-color: #000;
+    font-family: 'PT Sans', sans-serif;
+    font-size: 16px;
+    line-height: 1.4;
+    color:#fff;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+@font-face {
+    font-family: "Futura PT";
+    src: url("fonts/FuturaPTHeavy.otf");
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: border-box;
+}
