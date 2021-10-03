@@ -10,7 +10,7 @@ body {
     font-family: 'PT Sans', sans-serif;
     font-size: 16px;
     line-height: 1.4;
-    color:#fff;
+    color:#282828;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 }
@@ -18,6 +18,9 @@ body {
 @font-face {
     font-family: "Futura PT";
     src: url("fonts/FuturaPTHeavy.otf");
+    font-family: "Georgia";
+    src: url("fonts/georgia italic.ttf");
+    src: url("Georgia Regular font.ttf");
 }
 
 *,
@@ -25,3 +28,154 @@ body {
 *:after {
     box-sizing: border-box;
 }
+
+.main {
+width: 70%;
+min-height: 100vh;
+margin: 0 auto;
+padding-top: 7rem;
+padding-left: 7rem;
+padding-bottom: 7rem;
+
+background-color: #444D52;
+}
+
+.header {
+    position: relative;
+    z-index: 2;
+    left: 0;
+
+    margin-bottom: -14%;
+}
+
+.header__main {
+    width: 80%;
+    height: 19rem;
+    padding: 5rem 0rem 1rem 6.5rem;
+    margin-left: auto;
+
+    background-color: #000;
+    color: #fff;
+}
+
+.header__main__subtitle {
+    font-size: 15px;
+    line-height: 1;
+    color: #767676;
+    font-family: "Proxima Nova";
+}
+
+.header__main__title {
+    font-size: 4.8rem;
+    line-height: 1.1;
+    color: #fefefe;
+    font-weight: 400;
+    font-family: "Playfair Display";
+
+    position: relative;
+}
+
+.header__main__title::after {
+    content: "";
+    display: block;
+    margin-left: 35rem;
+
+    width: 2px;
+    height: 85%;
+    background-color: #edeff2;
+
+    position: absolute;
+    transform: translateY(-4.5rem);
+    opacity: .6;
+}
+
+.header__main__title::before {
+    content: "";
+    display: block;
+    right: 0;
+
+    width: 100%;
+    height: 3px;
+    background-color: #ffffff;
+
+    position: absolute;
+    transform: translateY(6.2rem);
+    opacity: .1;
+}
+
+.header__icons {
+    width: 75%;
+    height: 8rem;
+    padding-top: 2rem;
+    padding-left: 5rem;
+    margin-left: auto;
+
+    background-color: #FABF2D;
+}
+
+.article {
+    position: relative;
+    padding: 19rem 12.5rem 0;
+    background-color: #fff;
+}
+
+.article--mg-right {
+    margin-right: 7rem;
+}
+
+.article::before {
+    content: "";
+    display: block;
+    width: 2px;
+    height: 100%;
+    top: 0;
+    left: 7rem;
+    position: absolute;
+    background-color: #e8eced;
+}
+
+.article__author {
+    padding-bottom: 5rem;
+    font-size: 20px;
+    letter-spacing: 4px;
+    color: #b4b4b4;
+    font-family: "Proxima Nova";
+}
+
+.article__title {
+    width: 122.5rem;
+    font-size: 7.8rem;
+    line-height: 7.4rem;
+    color: #2a2a2a;
+    font-family: "Futura PT";
+    text-transform: uppercase;
+}
+
+.article__subtitle {
+    padding-bottom: 7rem;
+
+    font-size: 3.0rem;
+    line-height: 6.2rem;
+    color: #8f8f8f;
+    font-style: italic;
+    font-family: "Georgia";
+    text-align: left;
+}
+
+.article__text {
+    width: 96%;
+    padding-bottom: 3rem;
+    font-size: 2.7rem;
+    line-height: 4.0rem;
+    color: #000000;
+    font-family: "Georgia";
+    text-align: left;
+}
+
+.article__text-italic {
+    font-size: 2.7rem;
+    font-style: italic;
+    color: #000000;
+    font-family: "Georgia";
+}
+

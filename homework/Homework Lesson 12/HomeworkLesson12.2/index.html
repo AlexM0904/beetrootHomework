@@ -5,33 +5,66 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="reset.css">
-<link rel="stylesheet" href="style.css">
-<title>Homework 12.2</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&  display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="style.css">
+    <title>Homework 12.2</title>
 </head>
-<main>
-    <div class="header__black">
-        <p class="sm-title">TITLE</p>
-        <h2 class="header__black__title">Like Tears In Ra</h2>
-    </div>
-    <div class="header__yellow">
-    </div>
-    <article>
-        <p class="article__subtitle">Roy Batty, 2019</p>
-        <h1 class="article__title">Like Tears in Rain</h1>
-        <p class="article__subtitle-italic">Where am I going? How long have I got?</p>
-
-        <p class="article__text">I've seen things you people wouldn't believe. Attack ships on fire off the shoulder of Orion. I watched C-beams glitter in the dark near the Tannhauser gate. All those moments will be lost in time... like tears in rain... Time to die.</p>
-
-        <p class="article__text">I don't know why he saved my life. Maybe in those last moments he loved life more than he ever had before. Not just his life - anybody's life; my life. All he'd wanted were the same answers...</p>
-
-    </article>
-
-
-</main>
 <body>
+    <main class="main">
+        <header class="header">
+            <div class="header__main">
+                <p class="header__main__subtitle">TITLE</p>
+                <h2 class="header__main__title">Like Tears In Ra</h2>
+            </div>
+            <div class="header__icons">
+                <svg version="1.2" baseProfile="tiny-ps" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 568 32" width="568" height="32">
+                    <title>Document Header</title>
+                    <defs>
+                        <image width="48" height="48" id="img1" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAQAAAD9CzEMAAAAIGNIUk0AAHomAACAhAAA+gAAAIDoAAB1MAAA6mAAADqYAAAXcJy6UTwAAAACYktHRAD/h4/MvwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAXNJREFUWMPt1i1Mw0AYxvFbBhMTYDYDChwI0syCBMmHAoEACYplFiRIYAokSFAssyBBAlOgQIFgMyAm1iz7Y967tGKlH1dB0jtzfXP3/ir6tFWodKfKgAzwzgp6VNIBzg1wlgZQ5McA3xTtA9t4x5Z94MEH3NsGZqVxm7asZuwCJ9L2lLqsjm0CBTrSdg5HVh0K9oANafqMQtGSq3V7wJ203EOhqMrVrS1gmgEALiUUijIuAAOm7ABHcsc3ptKQyqENIM+ntFs1tTWpfJBPDqxIsy9GTG3UpGE5OdA0CfBWdRqaSYFJ+iYB3rpOQ5+JZMCBLwHeqdOwnwTI8e5LgHfqNLyRiw8sEWYsxgeuQwFXcYESvVBATxIeGagRdtTiAa9yvD50h07DSxxgwdyfM3SPY/bMRwcu5Wgr8DHQabiICozTlaPVQECnoctYNGBXDrqUAwH9bYCdaMCTHGv8+TLU34bH7O86A9IDNtOdGZAB/wD4BVCkjmlX1RmkAAAAAElFTkSuQmCC"/>
+                        <image width="48" height="48" id="img2" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAQAAAD9CzEMAAAAIGNIUk0AAHomAACAhAAA+gAAAIDoAAB1MAAA6mAAADqYAAAXcJy6UTwAAAACYktHRAD/h4/MvwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAMNJREFUWMPt1rEJAkEQheF/Ay1BUDi0CA3OSsTgOlHhrEQMrhMVtAhF8MASNNDkGC5zZxkRZDZ6wcKXvJnd8OK7JzjgwD8Bny4GBxyIPkfGkiecrOcgZyf5QG4/aBUzyXMqa6DPhU6Ta4Y8rYGSheQVpfUu6nKl1+QHGXdroGAjeUthv02VBdUC6oJqAXVBdcCAsxT0xiimoDqgXdAla+sXLamgGiCpoBogqaDxQLuge6ZWv4rEB8YBB/z77oADDvwEeAPt+GABAXWNngAAAABJRU5ErkJggg=="/>
+                        <image width="48" height="48" id="img3" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAQAAAD9CzEMAAAAIGNIUk0AAHomAACAhAAA+gAAAIDoAAB1MAAA6mAAADqYAAAXcJy6UTwAAAACYktHRAD/h4/MvwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAOJJREFUWMPt1i0OwkAYhOGFEBw/B+AACBwXaILF4Ug4AH8pBkGC4ggQNFfAoblFT0BwWBpSXhTkqwDDjmiyW9cRj+jOpA6nfVwAAlB04Nt5cuPMgpoKeJ8rfS0AGSMtAHc6WgBOfgD7vs6Uu/nkLd+AwzEz2VABNEy2UgBNky0VQGyyyDfQJCb9JAll5TXN6Gl7MNc2eaveIjhQVU/FkZIWgIn/HuTX6ELFf9HyaxQpALtGsQKwa7RWAHaNxr6B/BpBV3tNE3UPBlpgr5yKB5tfQ/EPkJKwox1+3wMQgAAUAXgBd4CwTDg+01EAAAAASUVORK5CYII="/>
+                        <image width="48" height="48" id="img4" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAQAAAD9CzEMAAAAIGNIUk0AAHomAACAhAAA+gAAAIDoAAB1MAAA6mAAADqYAAAXcJy6UTwAAAACYktHRAD/h4/MvwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAQ9JREFUWMPtl0tqAkEQhv8OgcwiZukqPjZBcGHu4Dr7iJ5CEEFzHjF6CG+hBxCCYnbGlQ9+V/Y0avU8gqBS1ZuCqvq/pquGoQxxWXuAAu4e8ChGwvEynvrILO2BAhSgAAXcOGBjvScxJ7DeOjng13pvYk7JeovkgIn1PsScMDL2/POE0+HBfvh8NuOFc5vTlnRkQJE7W96nOYkbDm18y3xyADggHUTm6PZDJ9qTVXyAAleOyIxdVhgw4Du/nMchl3xNBwAbjGOfPg0/AGxFyjf9ClEAsM4/UXzpv308AJhn35mocHJ6zEVXm5gLSAE1VFFGFsACY4zwjWmcQqMbzpXuB2kbY7QHaV5NvwMF/Nv2LaQBEomTIQkAAAAASUVORK5CYII="/>
+                        <image width="48" height="48" id="img5" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAQAAAD9CzEMAAAAIGNIUk0AAHomAACAhAAA+gAAAIDoAAB1MAAA6mAAADqYAAAXcJy6UTwAAAACYktHRAD/h4/MvwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAENJREFUWMPt18ENACAIBDDZf2gcQTThg2UAegnwIHL1VgAAU4CXFAEAXKHRcQefAlkfHgBQWNNTAwAAAAB4QACAWcAGzTZiAdTaMvIAAAAASUVORK5CYII="/>
+                        <image width="48" height="48" id="img6" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAQAAAD9CzEMAAAAIGNIUk0AAHomAACAhAAA+gAAAIDoAAB1MAAA6mAAADqYAAAXcJy6UTwAAAACYktHRAD/h4/MvwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAP5JREFUWMPt1z8KwjAUx/EIQsFNT+BUiqNncPAYBUcP4SncHHoDq4OLV3B1cPIEitiKg8jXydL0n7VJpua9LZB+4PegvAiE2RYWaB/gEXKnacVs8aoAjxuqdZMJGQjRUZty4K4FiMoBXWUBC1jAAhaoWysCk8ABhx5HU8CFIQLBiIc6sGKZOXkzTW74qsABhy576Wwh3QlUgG8UfU7J2Y6OdKdoEjWBdBQuVwDODHLLVX4SNQE5igkvnowL9ze/CZCNQjBnVroiBv8CRVFUtTyJn0BZFFWdnsRPYNZok/bb8DeNTS+/Wy3A2uwD5Ipb/YTaECmEs5Y/b5+xFtDRH63pTY280Yl0AAAAAElFTkSuQmCC"/>
+                        <image width="48" height="48" id="img7" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAQAAAD9CzEMAAAAIGNIUk0AAHomAACAhAAA+gAAAIDoAAB1MAAA6mAAADqYAAAXcJy6UTwAAAACYktHRAD/h4/MvwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAEJJREFUWMPt1cEJACAMBEGv/6JjCyoRBCcNzCMHmxp3L4DfgC4tgGPATN8Dav+pgGbATPVAD8xUDwBmqgd6YKaA9Zusm0QBnN9OiQAAAABJRU5ErkJggg=="/>
+                        <image width="48" height="48" id="img8" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAQAAAD9CzEMAAAAIGNIUk0AAHomAACAhAAA+gAAAIDoAAB1MAAA6mAAADqYAAAXcJy6UTwAAAACYktHRAD/h4/MvwAAAAlwSFlzAAALEwAACxMBAJqcGAAAADhJREFUWMPt08EBACAIAzG7/9C6g8CLdIF8rrlndgFsA7q0AL4BmfoBQKZ+AJCpHwBk6gcAmQIqeyuqRAE6tHi/AAAAAElFTkSuQmCC"/>
+                        <image width="48" height="48" id="img9" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAQAAAD9CzEMAAAAIGNIUk0AAHomAACAhAAA+gAAAIDoAAB1MAAA6mAAADqYAAAXcJy6UTwAAAACYktHRAD/h4/MvwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAD5JREFUWMPt1cENADAIA7Fm/6HLDggeVc0C/hxK7tm9AH4DprQA2oBM3/uDAMYBmdoDgEztAUCm9gAgU0D/CixqRAFU8jYcAAAAAElFTkSuQmCC"/>
+                        <image width="48" height="48" id="img10" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAQAAAD9CzEMAAAAIGNIUk0AAHomAACAhAAA+gAAAIDoAAB1MAAA6mAAADqYAAAXcJy6UTwAAAACYktHRAD/h4/MvwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAD5JREFUWMPt1cEJADAIBMFc/0WbHoKCkLGBebhwqTN7AfwGdGkBPAMy3QvU9JMBMrUHAJnaA4BM7QFApoCGu2xbRAEzNbnNAAAAAElFTkSuQmCC"/>
+                    </defs>
+                    <style>
+                        tspan { white-space:pre }
+                    </style>
+                    <g id="Document Header">
+                        <g id="Control Bar">
+                            <g id="Icons">
+                                <use id="ic_format_color_text_white_24dp" style="opacity: 0.502" href="#img1" transform="matrix(0.792,0,0,0.771,0,-5)"/>
+                                <use id="ic_format_italic_white_24dp" style="opacity: 0.502" href="#img2" transform="matrix(0.792,0,0,0.771,230,-1)"/>
+                                <use id="ic_format_bold_white_24dp" href="#img3" transform="matrix(0.917,0,0,0.917,167,-5)"/>
+                                <use id="ic_format_underline_white_24dp" style="opacity: 0.502" href="#img4" transform="matrix(0.792,0,0,0.771,292,-3)"/>
+                                <use id="ic_format_size_white_24dp" style="opacity: 0.502" href="#img5" transform="matrix(0.792,0,0,0.771,55,-2)"/>
+                                <use id="ic_insert_photo_white_24dp" style="opacity: 0.502" href="#img6" transform="matrix(0.792,0,0,0.771,115,-3)"/>
+                                <use id="ic_format_align_center_white_24dp" style="opacity: 0.502" href="#img7" transform="matrix(0.792,0,0,0.771,475,-3)"/>
+                                <use id="ic_format_align_justify_white_24dp" style="opacity: 0.502" href="#img8" transform="matrix(0.792,0,0,0.771,355,-3)"/>
+                                <use id="ic_format_align_left_white_24dp" style="opacity: 0.502" href="#img9" transform="matrix(0.792,0,0,0.771,415,-3)"/>
+                                <use id="ic_format_align_right_white_24dp" style="opacity: 0.502" href="#img10" transform="matrix(0.792,0,0,0.771,535,-3)"/>
+                            </g>
+                        </g>
+                    </g>
+                </svg>
+            </div>
+        </header>
+        <article class="article article--mg-right">
+            <p class="article__author">Roy Batty, 2019</p>
+            <h1 class="article__title">Like Tears in Rain</h1>
+            <p class="article__subtitle">Where am I going? How long have I got?</p>
 
+            <p class="article__text">I've seen things you people wouldn't believe.  Attack ships on fire off the shoulder of Orion. I watched C-beams glitter    in the dark near the Tannhauser gate. All those moments will be lost in    time... like tears in rain... <span class="article__text-italic">Time to   die.</span></p>
+
+            <p class="article__text padding--0">I don't know why he saved my life.  Maybe in those last moments he loved life more than he ever had before.  Not just his life - anybody's life; my life. All he'd wanted were the same   answers...</p>
+
+        </article>
+    </main>
 </body>
 </html>
