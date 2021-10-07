@@ -155,20 +155,19 @@ header nav a:hover {
 /* .Section2 ================ */
 
 
-section.section2 {
+.section2 {
     display: flex;
     align-items: center;
     width: 100%;
-    padding-left: 15%; /* так контент не выравнивают justify-content: center; */
-    background: #00c4c4;
+    justify-content: space-between; /* так контент не выравнивают justify-content: center; */
+    background-color: #00c4c4;
 }
 
-section.section2__text { /* неработает по причине что данная запись расшифровуется как :
+.section2__text { /* неработает по причине что данная запись расшифровуется как :
  только тег section у которого есть класс .section2__text */
     display: flex;
     flex-direction: column;
-    width: 30%;
-    background: #00c4c4;
+    width: 40%;
 }
 
 .section2 h1 {
@@ -189,7 +188,8 @@ section.section2__text { /* неработает по причине что да
 }
 
 .section2 img {
-    display: inline-block;
+    display: inline-flex;
+    width: 50%;
 }
 
 

@@ -37,7 +37,8 @@ ul {
     margin: 0 auto;
 }
 
-.sidebar-left, .sidebar-right {
+.sidebar-left,
+.sidebar-right {
     width: 17.18%;
     height: auto;
     min-height: 100vh;
@@ -88,7 +89,8 @@ ul {
     width: 35rem;
 }
 
-.header__contacts a, .header__navi a {
+.header__contacts a,
+.header__navi a {
     display: inline-block;
     padding-left: 3rem;
 
@@ -110,7 +112,8 @@ ul {
     transition: text-decoration .5s linear;
 }
 
-.header__contacts a:hover, .header__navi a:hover {
+.header__contacts a:hover,
+.header__navi a:hover {
     text-decoration: underline;
 }
 
@@ -118,7 +121,7 @@ ul {
 
 .header__search {
     display: flex;
-    justify-content:space-between;
+    justify-content: space-between;
     align-items: center;
     width: 100%;
     max-width: 100%;
@@ -298,7 +301,7 @@ li.nav__item:first-child {
     background-color: transparent;
 }
 
-.nav__item:hover > .subnav {
+.nav__item:hover>.subnav {
     display: block;
 }
 
@@ -456,7 +459,7 @@ h3.article__item__title {
 }
 
 .article__btn-banner:hover {
-    background-color: rgba(106, 152, 60,.5);
+    background-color: rgba(106, 152, 60, .5);
 }
 
 /* Shop ================ */
@@ -518,7 +521,7 @@ h3.article__item__title {
 
 .shop__price {
     display: flex;
-    justify-content:space-between;
+    justify-content: space-between;
     align-items: center;
 
     color: a9a9a9;
@@ -582,8 +585,3 @@ h6.sale {
     color: #a9a9a9;
     text-decoration: line-through;
 }
-
-
-
-
-
