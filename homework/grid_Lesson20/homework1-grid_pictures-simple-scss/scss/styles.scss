@@ -1,0 +1,148 @@
+@import 'reset';
+@import 'normalize';
+@import 'main';
+
+body {
+   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UIEmoji", "Segoe UI Symbol", "Noto ColorEmoji";
+   font-size: 15px;
+  /* overflow-x: hidden;*/
+
+   background-color: #fff;
+}
+
+@font-face {
+   font-family: 'Myriad Pro';
+   src: url(../fonts/MYRIADPRO-REGULAR.OTF);
+}
+
+*,
+*:before,
+*:after {
+   box-sizing: border-box;
+}
+
+.page {
+   width: 100%;
+   margin: 0 auto;
+   max-width: 100%;
+   min-height: 100vh;
+  /* overflow-x: hidden;*/
+   display: grid;
+   grid-template-areas:
+            "sneakers sneakers man"
+            "sneakers sneakers woman"
+            "number10 back hoodie"
+    ;
+   gap: 10px;
+   grid-template-columns: repeat(3, 0.7fr);
+   grid-template-rows: repeat(2, 0.5fr) 0.8fr;
+}
+
+.sneakers {
+   grid-area: sneakers;
+   width: 100%;
+   background-color: #000;
+}
+
+.sneakers__img {
+   display: block;
+   max-width: 100%;
+}
+
+.man {
+   grid-area: man;
+   height: auto;
+   object-fit: cover;
+   background-color: #000;
+}
+
+.man__img {
+   display: block;
+   width: 100%;
+   max-width: 100%;
+}
+
+.woman {
+   grid-area: woman;
+   max-width: 100%;
+   object-fit: cover;
+   background-color: #000;
+}
+.woman__img  {
+   display: block;
+   width: 100%;
+}
+
+.number10 {
+   grid-area: number10;
+   object-fit: cover;
+   background-color: #000;
+}
+
+.back {
+   grid-area: back;
+   object-fit: cover;
+   background-color: #000;
+}
+
+.hoodie {
+   grid-area: hoodie;
+   object-fit: cover;
+   background-color: #000;
+}
+
+.page-bottom {
+   width: 100%;
+   margin: 0 auto;
+   max-width: 100%;
+   display: grid;
+   grid-template-areas:
+            "item1 item2 item3 item4"
+            "item5 item6 item7 item8";
+}
+
+.item1 {
+   grid-area: item1;
+   height: auto;
+   background-color: #000;
+}
+.item2 {
+   grid-area: item2;
+   height: auto;
+   background-color: #000;
+}
+.item3 {
+   grid-area: item3;
+   height: auto;
+   background-color: #000;
+}
+.item4 {
+   grid-area: item4;
+   height: auto;
+   background-color: #000;
+}
+.item5 {
+   grid-area: item5;
+   height: auto;
+   background-color: #000;
+}
+.item6 {
+   grid-area: item6;
+   height: auto;
+   background-color: #000;
+}
+.item7 {
+   grid-area: item7;
+   height: auto;
+   background-color: #000;
+}
+.item8 {
+   grid-area: item8;
+   height: auto;
+   background-color: #000;
+}
+
+.item__img {
+   display: block;
+   width: 100%;
+}

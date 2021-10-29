@@ -258,29 +258,37 @@ input.input__search placeholder {
     margin: 0 auto;
 }
 
-.container::before {
-    content: "";
-    display: block;
-    width: 107.5%;
-    height: 4.5rem;
-    margin-top: 2rem;
 
-    background-color: #f9f9f9;
-
-    transform: translateY(50px) translateX(-40px);
-}
 
 
 /* Nav */
 
 .nav {
     width: 100%;
-    height: 30px;
-    margin: 2rem 2rem 7rem 0;
+
+    /*padding: 2rem 2rem 7rem 0;*/
+
+    position: relative;
 }
 
 .nav__list {
     display: flex;
+    width: 100%;
+
+}
+
+.nav::before {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 4.5rem;
+    top: 0.5rem;
+
+    position: absolute;
+
+    background-color: #f9f9f9;
+
+    /*transform: translateY(50px) translateX(-40px);*/
 }
 
 .nav__item {
@@ -355,18 +363,27 @@ li.nav__item a.nav__link {
 
 /* Article */
 
-.article {
+.section {
     display: flex;
-    width: 100%;
-    margin: 4rem 0 0;
-    height: 22rem;
+    justify-content: space-between;
+    margin-bottom: 5rem;
 }
 
-.article__menu {
+.article {
+    display: flex;
+    width: 65%;
+}
+
+.article--banner {
+    padding-right: 2rem;
+    padding-left: 2rem;
+}
+
+.nav__menu {
     display: flex;
     flex-direction: column;
     width: 33%;
-    margin-bottom: 22rem;
+    margin-left: 1rem;
 }
 
 h4.article__menu__title {
@@ -377,8 +394,8 @@ h4.article__menu__title {
     color: #000;
 }
 
-.article .article__menu ul {
-    padding-bottom: 2rem;
+.article__menu__nav {
+    margin-bottom: 2rem;
 }
 
 .article__menu__link {
@@ -419,12 +436,8 @@ h4.article__menu__title {
 .article__item {
     display: flex;
     flex-direction: column;
-    width: 30%;
-    height: 18rem;
-    margin-left: 3rem;
-    padding-top: 3rem;
-    padding-left: 2rem;
-    flex-shrink: 1;
+    width: 50%;
+    padding: 3rem 0 1rem 2rem;
 
     border-radius: 6px;
 
@@ -464,13 +477,14 @@ h3.article__item__title {
 
 /* Shop ================ */
 
+
 .shop {
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
     width: 100%;
 
-    margin: 2rem 0;
+    margin: 2rem 0 5rem;
 }
 
 .shop:nth-child(2) {
@@ -496,8 +510,13 @@ h3.article__item__title {
     border-radius: 1.2rem;
 }
 
-.shop__item img {
+.margin:not(last-child) {
+    margin-right: 1rem;
+}
+
+.shop__item__img {
     display: block;
+    width: 100%;
     margin-bottom: 0.7rem;
     border-radius: .8rem;
     position: relative;
@@ -585,3 +604,4 @@ h6.sale {
     color: #a9a9a9;
     text-decoration: line-through;
 }
+

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="style.css">
+    <title>Form 2</title>
+</head>
+<body>
+    <div class="page">
+        <div class="container">
+            <h1 class="container__title">Contact</h1>
+            <p class="container__text">
+                For new projects, ideas, business or anything
+                you'd like to discuss, contact with me!
+            </p>
+            <div class="wrapper">
+                <form class="form" action="/" method="post">
+                    <div class="form__group__item">
+                        <input class="input" required minlength="3"type="text"    placeholder="Your name*...">
+                        <div class="error">Error</div>
+                    </div>
+                    <div class="form__group__item">
+                        <input class="input" required type="email"pattern=".{8,}"  placeholder="Your email*...">
+                        <div class="error">Error</div>
+                    </div>
+                    <div class="form__group__item">
+                        <input class="input" required type="tel"pattern="[+0-9]{3}[0-9]{4}[0-9]{7}"placeholder="Your phone number*...">
+                        <div class="error">Error</div>
+                        <textarea class="textarea" name="text"placeholder="Your meassage..."></textarea>
+                    </div>
+                </form>
+                <div class="contact">
+
+                    <h5 class="contact__title">ADDRESS<h5>
+                    <p class="contact__p">123 Cityname, Street, City,Country</p>
+                    <h5 class="contact__title">EMAIL<h5>
+                    <p class="contact__p">cahee@domaincom</p>
+                    <h5 class="contact__title">PHONE<h5>
+                    <p class="contact__p">+012 3456789</p>
+
+
+                </div>
+            </div>
+        </div><!-- /.Container -->
+        <footer class="footer">
+            <p class="footer__copyright">© 2015 Company. All right reserved.</p>
+            <div class="footer__logo">Cahee</div>
+            <p class="footer__text">Made with <span class="text-red">love</span> by Auskteez</p>
+        </footer>
+    </div><!-- /.Page -->
+</body>
+</html>

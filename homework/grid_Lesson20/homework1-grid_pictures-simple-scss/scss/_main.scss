@@ -1,0 +1,355 @@
+/*
+Общая инфа!
+@info: Единицы измерения в CSS = https://techrocks.ru/2019/08/07/units-in-css-for-beginners/
+@info: Краткая запись CSS как антипаттерн = http://prgssr.ru/development/kratkaya-zapis-css-kak-antipattern.html
+@info: Шрифты = http://htmlbook.ru/blog/svoi-shrift-na-stranitse
+ 1) https://habr.com/ru/company/htmlacademy/blog/552388/
+ 2) https://snipp.ru/html-css/font-face
+
+
+
+Теорию что такое БЕМ :
+БЛОК - ето елемент страници который может быть копирован в любое место страници, без искажения стилей внутри.
+       блоки могут вкладыватся друг в друга.
+ЕЛЕМЕНТ - строго пренадлежит БЛОКу внутри которого он находится. Елемента за блоком быть не может.
+МОДИФИКАТОР - класс который будет изменять повидение ЕЛЕМЕНТов и БЛОКов и неважно где.
+следовательно
+
+СЛЕДОВАТЕЛЬНО нужно строить дерево css классов в HTMLе.
+ К примеру такая структура в HTML :
+краткая запись (сделана для Emmet плагина. Вставить в HTML и нажать ТАБ):
+  ``` .header>.header__logo>.header__icon+.header__title^+.header__menu.menu>.menu__item*4>.menu__icon+.menu__title ```
+развернутая запись : ```
+    <div class="header">
+        <div class="header__logo">
+            <div class="header__icon"></div>
+            <div class="header__title"></div>
+        </div>
+        <div class="header__menu menu">
+            <div class="menu__item">
+                <div class="menu__icon"></div>
+                <div class="menu__title"></div>
+            </div>
+            <div class="menu__item">
+                <div class="menu__icon"></div>
+                <div class="menu__title"></div>
+            </div>
+            <div class="menu__item">
+                <div class="menu__icon"></div>
+                <div class="menu__title"></div>
+            </div>
+            <div class="menu__item">
+                <div class="menu__icon"></div>
+                <div class="menu__title"></div>
+            </div>
+        </div>
+    </div>
+```
+В данном примере:
+header и menu --- Ето Блоки
+menu__item / menu__title / menu__icon --- Елементы блока "menu"
+header__logo / header__icon / header__menu  --- Елементы блока "header"
+МОДИФИКАТОРы - я неприводил в пример, для начала нужно освоить такую структуру.
+
+*/
+
+:root {
+  /* @Info
+   1) https://developer.mozilla.org/en-US/docs/Web/CSS/var()
+   2) https://developer.mozilla.org/ru/docs/Web/CSS/Using_CSS_custom_properties
+   */
+  --color-Red: Red;
+  --color-Brown: Brown;
+  --color-Orange: Orange;
+  --color-Yellow: Yellow;
+  --color-Lime: Lime;
+  --color-Green: Green;
+  --color-cadetblue: cadetblue;
+  --color-Cyan: Cyan;
+  --color-Blue: Blue;
+  --color-Pink: Pink;
+  --color-Violet: Violet;
+  --color-Purple: Purple;
+  --color-Indigo: rgb(148 0 255 / 70%); /* Indigo + transparent 60% */
+  --color-Black: Black;
+  --color-White: White;
+}
+
+.page {
+  /* блок - у "блока" недолжно быть стилей влияюших на окружающие блоки или елементы - для возможности переноса блока.
+   При перемещении блока в другую часть страници. Разметка и стили для "елементов блока" должна остается прежними Без изменений.
+  */
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+
+  &__header,
+  &__footer {
+    /* елемент блока - у "елемента блока" могут быть стили влияюших на окружающие елементы внутри родительского блока.
+    "елементом блока" - может быть другой блок.
+     */
+    background-color: var(--color-Indigo);
+  }
+
+  &__main {
+    /* елемент блока */
+    flex-grow: 1;
+    background-color: var(--color-White);
+  }
+}
+
+.header {
+  /* блок - у "блока" недолжно быть стилей влияюших на окружающие елементы для возможности переноса блока.
+   При перемещении блока в другую часть страници. Разметка и стили для "елементов блока" должна остается прежними Без изменений.
+  */
+  display: flex;
+  align-items: center;
+  padding: 20px 5%;
+  position: sticky; /* просто чтоб было веселей */
+  top: 0;
+  z-index: 9999;
+
+  &__logo {
+    /* елемент блока - у "елемента блока" могут быть стили влияюших на окружающие елементы внутри родительского блока.
+      "елементом блока" - может быть другой блок.
+       */
+    padding: 5px;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+
+    &_img {
+      height: 50px;
+      width: 50px;
+      border-radius: 50%;
+      background-color: var(--color-White);
+      padding: 5px;
+      box-sizing: border-box;
+      overflow: hidden;
+    }
+
+    &_text {
+      font-family: "Ephesis", cursive;
+      font-weight: bolder;
+      font-size: 34px;
+      padding: 0 5px;
+      margin: 0 15px;
+      box-sizing: border-box;
+      background-color: var(--color-White);
+    }
+  }
+
+  &__nav {
+    /* елемент блока */
+    flex-grow: 1;
+    flex-shrink: 1;
+  }
+}
+
+.nav {
+  /* блок */
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+
+  padding: 0 15px;
+
+  &__link {
+    /* елемент блока */
+    display: inline-block;
+    width: 70px;
+    height: 15px;
+    background-color: var(--color-White);
+    margin: 0 2%;
+
+    &:first-child {
+      margin-left: 0;
+    }
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+}
+
+.footer {
+  display: flex;
+  align-items: center;
+  padding: 20px 5%;
+}
+
+.main {
+  /* блок */
+  display: grid;
+  grid-gap: 10px;
+  grid-template-columns: minmax(789px, auto) minmax(270px, auto);
+  grid-template-areas: "main sidebar";
+  padding: 0 5%;
+
+  &__sidebar {
+    /* елемент блока */
+    grid-area: sidebar;
+    background-color: var(--color-cadetblue);
+    padding: 20px;
+
+    /* просто чтоб было веселей */
+    position: sticky;
+    height: 200px;
+    top: 115px; /* потому что у хедера высота тоже есть */
+  }
+
+  &__content {
+    /* елемент блока */
+    grid-area: main;
+    background-color: var(--color-White);
+    flex-grow: 1;
+
+    & > h3{
+      margin-top: 50px;
+      text-align: center;
+      font-size: 25px;
+      border-top: double 10px #e2e2e2;
+    }
+    & > section {
+      padding: 20px;
+      margin: 0 0 50px;
+      background-color: var(--color-cadetblue);
+      width: 100%;
+      box-sizing: border-box;
+    }
+  }
+}
+
+
+/*
+@info CSS Grid = https://html5book.ru/css-grid/
+@info Полное руководство по CSS Grid = https://tuhub.ru/posts/css-grid-complete-guide
+*/
+.grid_example_1 {
+  display: grid;
+
+
+  /* Количество строк / столбцов */
+  grid-template-columns: 200px 200px 200px;
+  grid-template-rows: 20px 40px 60px;
+
+  //grid-template-columns: repeat(3, 200px);
+  //grid-template-rows: repeat(3, 40px);
+
+  /*
+  Относительные и абсолютные единицы
+  Размеры дорожек сетки можно задавать используя
+    - относительные единицы длины — em, vh, vw, % (Размеры в % вычисляются от контейнера-сетки);
+    - абсолютные единицы длины — px;
+  Единица измерения fr - представляет собой долю доступного пространства в грид-контейнере.
+  */
+  //grid-template-columns: 1fr 1fr 1fr 1fr; // эквивалентно grid-template-columns: 25% 25% 25% 25%;
+  //grid-template-columns: 1fr 2fr 1fr; // эквивалентно grid-template-columns: 25% 50% 25%;
+  //grid-template-columns: 20px repeat(3, 1fr) 20px;
+
+
+  /*
+  Зазоры между грид-ячейками можно создать с помощью свойств
+  */
+  //grid-column-gap: 1em;
+  //grid-row-gap: 50px;
+
+  /*
+  Минимальные и максимальные размеры дорожек
+  Функция minmax(min,max) определяет диапазон размеров
+  */
+  //grid-template-columns: 300px minmax(600px,1fr);
+
+  //grid-auto-flow: column;
+
+  div {
+    background-color: #7a7a7a;
+    padding: 5px;
+    border: solid 1px #fff;
+    text-align: center;
+  }
+}
+
+.grid_example_2 {
+  /*
+  Именованные области
+  Свойство grid-template-areas определяет именованные области сетки
+  */
+
+  display: grid;
+  grid-template-areas:
+          "yalow yalow yalow"
+          "green red red"
+          "pink pink indigo";
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 80px 1fr;
+
+  div {
+    padding: 20px;
+  }
+
+  .yalow {
+    grid-area: yalow;
+    background-color: var(--color-Yellow);
+  }
+
+  .green {
+    grid-area: green;
+    background-color: var(--color-Green);
+  }
+
+  .red {
+    grid-area: red;
+    background-color: var(--color-Red);
+  }
+
+  .pink {
+    grid-area: pink;
+    background-color: var(--color-Pink);
+  }
+
+  .indigo {
+    grid-area: indigo;
+    background-color: var(--color-Indigo);
+  }
+}
+
+.grid_example_3 {
+  display: grid;
+  grid-template-areas:
+          "post-1 post-1 post-2"
+          "post-1 post-1 post-3"
+          "post-4 . post-5"
+          "post-6 post-6 post-6"
+;
+  grid-template-rows: repeat(4, 100px);
+  grid-template-columns: repeat(3, 2fr);
+
+  div{
+    border: dotted 2px green;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    text-align: center;
+  }
+  .post-1 {
+    grid-area: post-1;
+  }
+  .post-2 {
+    grid-area: post-2;
+  }
+  .post-3 {
+    grid-area: post-3;
+  }
+  .post-4 {
+    grid-area: post-4;
+  }
+  .post-5 {
+    grid-area: post-5;
+  }
+  .post-6 {
+    grid-area: post-6;
+  }
+}
+
