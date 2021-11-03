@@ -49,7 +49,7 @@ a {
   justify-content: space-between;
   width: 100%;
   height: 100vh;
-  background-image: url(../img/Image.jpg);
+  background-image: url(../img/header-bg.jpg);
   background-color: #cccccc;
   background-position: center;
   background-repeat: no-repeat;
@@ -127,9 +127,9 @@ a {
   width: 100%;
 
     &__search {
-      width: 37.5%;
+      width: 37%;
       position: absolute;
-      top: 43%;
+      top: 45.5%;
       left: 50%;
       transform: translate(-50%, -50%);
 
@@ -245,20 +245,20 @@ a {
               fill: $white;
               stroke: $white;
             }
-          }
+        }
     }
 }
 
 .header__wrapper__scroll {
   display: flex;
   flex-direction: column;
-  margin-top: 70vh;
+  transform: translateY(135px);
 }
 
 .header__wrapper__scroll__down {
   margin-bottom: 5px;
 
-  font-size: 10px;
+  font-size: 12px;
   letter-spacing: 2.2px;
   color: $white;
   font-family: 'Josefin Sans';
@@ -267,8 +267,8 @@ a {
 
 .header__wrapper__scroll__arrow-svg {
   display: block;
-  width: 25px;
-  height: 25px;
+  width: 20px;
+  height: 20px;
   margin: 0 auto;
 
   fill: $white;
@@ -315,7 +315,6 @@ svg:hover {
 
     text-transform: uppercase;
     text-decoration: none;
-    font-size: 0.7rem;
     color: $white;
     font-size: 14px;
     font-weight: 400;
@@ -332,109 +331,129 @@ svg:hover {
   }
 }
 
+.section-2-media {
+    display: none;
+}
 
-/* Section-2=============*/
+/* Section__choose=============*/
 
 .section-2 {
   width: 100%;
-}
+  display: flex;
+  justify-content: space-between;
+  padding: 119px 325px 103px;
 
-.section__choose {
-    width: 100%;
+  background-image: url(../img/section-bg.jpg);
+  background-color: #cccccc;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  align-items: flex-end;
+
+
+    &__article {
     display: flex;
     justify-content: space-between;
-    padding: 130px 200px 103px;
 
-    background-image: url(../img/section-bg.jpg);
-    background-color: #cccccc;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    align-items: flex-end;
-}
 
-.article__text {
-  width: 50%;
+    &__text {
+    width: 50%;
+    margin-bottom: 10px;
 
-    &__items {
-        margin-bottom: 40px;
+        &__items {
+          margin-top: 57px;
+            margin-bottom: 57px;
+            display: flex;
+            flex-direction: column;
+            align-self: self-end;
 
-        &__h1 {
-          margin-bottom: 70px;
+              &__h1 {
+                margin-bottom: 55px;
 
-          font-size: 2.4rem;
-          color: $white;
-          font-weight: 400;
-          font-family: 'Aleo';
-          flex-shrink: 1;
-        }
+                font-size: 2.4rem;
+                color: $white;
+                font-weight: 400;
+                font-family: 'Aleo';
+                flex-shrink: 1;
+              }
 
-        &__p {
-          margin-bottom: 40px;
+              &__p {
+                margin-bottom: 17px;
 
-          font-size: 16px;
-          letter-spacing: 2px;
-          line-height: 26px;
-          color: $gray;
-          font-family: 'Josefin Sans';
-          flex-shrink: 1;
+                font-size: 16px;
+                letter-spacing: 2px;
+                line-height: 26px;
+                color: $gray;
+                font-family: 'Josefin Sans';
+                flex-shrink: 1;
 
-          &:last-child {
-            margin-bottom: 0;
+              &:last-child {
+                margin-bottom: 0;
+              }
           }
-        }
+      }
     }
+  }
 }
+
 
 .btn {
-  width: 15rem;
-  height: 4rem;
+width: 15rem;
+height: 4rem;
 
-  text-transform: uppercase;
-  font-size: 1.2rem;
-  letter-spacing: 1px;
-  color: $white;
-  font-weight: 400;
-  font-family: 'Aleo';
-  border: 0;
-  outline: 0;
+text-transform: uppercase;
+font-size: 1.2rem;
+letter-spacing: 1px;
+color: $white;
+font-weight: 400;
+font-family: 'Aleo';
+border: 0;
+outline: 0;
 
-  background-color: $blue;
-  transition: background-color .3s linear;
-  //transform: translate(3px, -22px);
+background-color: $blue;
+transition: background-color .3s linear;
+//transform: translate(3px, -22px);
 
-      &:hover {
-        background-color: darken($blue, 5%);
-      }
+    &:hover {
+      background-color: darken($blue, 5%);
+    }
 
-      &:focus {
-        border: solid 2px #EF9D9C;
-      }
+    &:focus {
+      border: solid 2px #EF9D9C;
+    }
 
 }
 
-.article__photos {
-    display: block;
-    object-fit: contain;
-    object-position: center;
+.section-2 {
 
-    &__img {
-      display: block;
-      min-width: 75%;
-      flex-shrink: 0;
+    &__article__photos {
+      display: flex;
+      flex-direction: column;
+      align-self: flex-start;
+      object-fit: contain;
+      object-position: center;
 
-      &:first-child {
-        margin-bottom: 5px;
-        transform: translate(-120px);
+      &__img {
+        display: block;
+        min-width: 75%;
+        flex-shrink: 0;
+
+        &:first-child {
+          margin-bottom: 5px;
+          transform: translate(-120px);
+        }
       }
     }
 }
+
+
+// Section__icons========
 
 .section__icons {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 45px 137px 40px 0;
+  padding: 66px 118px 42px 0;
 
   background-color: #333333;
 
@@ -442,8 +461,7 @@ svg:hover {
     &__item {
       display: flex;
       flex-direction: column;
-      //align-self: flex-end;
-      margin: 0 -70px;
+      margin: 0 -46px;
 
         &:first-child {
         margin-left: 68px;
@@ -469,7 +487,7 @@ svg:hover {
     &__curve {
       position: relative;
       overflow: hidden;
-      width: 291px;
+      width: 263px;
       height: 251px;
       padding-bottom: 164px;
       //align-self: flex-start
@@ -479,7 +497,7 @@ svg:hover {
       content: '';
       border-top: 1px dashed $white;
       border-radius: 50%;
-      width: 406px;
+      width: 394px;
       height: 334px;
       position: absolute;
       top: 1%;
@@ -553,7 +571,7 @@ svg:hover {
     width: 100%;
     display: flex;
     justify-content: center;
-    padding: 133px 0 183px;
+    padding: 107px 0 216px;
 
     background-image: url(../img/section5last-bg.jpg);
     background-color: #cccccc;
@@ -580,31 +598,41 @@ svg:hover {
 
       &__item {
           width: 100%;
-          height: 290px;
+          height: 67%;
           display: flex;
           justify-content: center;
           align-items: center;
 
-          &__img {
-              display: block;
-              width: 26%;
+          &__image {
+              display: flex;
+              flex-shrink: 0;
+              width:453px;
               height: 100%;
               object-fit: cover;
               object-position: center;
-          }
+
+              &__img {
+                width: 100%;
+                object-fit: cover;
+                object-position: center;
+                }
+              }
+
 
           &__text {
-                    display: block;
-                    width: 39%;
+                    display: flex;
+                    flex-direction: column;
+                    flex-shrink: 1;
+                    width: 660px;
                     height: 100%;
-                    object-fit: cover;
-                    object-position: center;
-                    padding: 45px;
+                    //object-fit: cover;
+                    //object-position: center;
+                    padding: 55px;
 
                     background-color: #333;
 
                 &__small-title {
-                  margin-bottom: 45px;
+                  margin-bottom: 42px;
                   font-size: 20px;
                   color: #fefefe;
                   font-family: 'Josefin Sans';
@@ -633,11 +661,11 @@ svg:hover {
                       font-weight: 400;
                     }
                 }
-
+              }
           }
       }
     }
-}
+
 
 
 /* Footer ========*/
@@ -646,7 +674,7 @@ svg:hover {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding: 125px 0 62px;
+    padding: 90px 0 121px;
     background-color: #232323;
 
         &__logo, &__p {
@@ -656,11 +684,17 @@ svg:hover {
         }
 
         &__logo {
-            margin-bottom: 15px;
+            margin-bottom: 4px;
             font-size: 24px;
             font-weight: 700;
             letter-spacing: 3px;
             text-transform: uppercase;
+
+            transition: color .3s linear;
+
+            &:hover {
+              color: $blue;
+          }
         }
 
         &__p {
