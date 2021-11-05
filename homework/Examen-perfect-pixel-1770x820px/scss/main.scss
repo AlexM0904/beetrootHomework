@@ -1,8 +1,10 @@
-@import 'vars';
+@import 'vars'; /* Дублирование */
 
 
 html {
-  font-size: 15px;
+  font-size: 15px; /* безполезный потому что на body тоже стоит
+  font-size - стиль которые наследуется/передается по каскадности
+  */
 }
 
 body {
@@ -14,6 +16,7 @@ body {
 }
 
 @font-face {
+  /* подключение шрифтов должно быть отдельным файлом */
   font-family: 'Josefin Sans';
   src: url(../fonts/Josefin_Sans/JosefinSans-Regular.ttf);
   src: url(../fonts/Josefin_Sans/JosefinSans-Bold.ttf);
@@ -27,6 +30,7 @@ body {
 *,
 *:before,
 *:after {
+  /* что тут делает сброс/нормалайз стилей */
   box-sizing: border-box;
 }
 
@@ -42,7 +46,6 @@ a {
 
 
 /* Header==========*/
-
 .header {
   display: flex;
   flex-direction: column;
@@ -255,6 +258,7 @@ a {
   transform: translateY(135px);
 }
 
+/* названия не православные )) */
 .header__wrapper__scroll__down {
   margin-bottom: 5px;
 
@@ -461,10 +465,13 @@ svg:hover {
   &__item {
     display: flex;
     flex-direction: column;
-    margin: 0 -46px;
+    margin: 0 -46px; /* зачем задавать каждому
+      Контент подстраивать под дизайн иногда нужно - но только если другого выбора небыло.
+      отрицательный стоило указывать на __curve
+   */
 
     &:first-child {
-      margin-left: 68px;
+      margin-left: 68px; /*  чтото пошло не так */
     }
 
 
