@@ -23,10 +23,10 @@
     <meta name="description" content="">
 
     <!-- Favicons -->
-    <link rel="apple-touch-icon" sizes="180x180" href="img/favicons/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="img/favicons/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="img/favicons/favicon-16x16.png">
-    <link rel="manifest" href="assets/img/favicons/site.webmanifest">
+    <link rel="apple-touch-icon" sizes="180x180" href="img/favicons/apple-touch-icon.png"> <!-- некоректный путь -->
+    <link rel="icon" type="image/png" sizes="32x32" href="img/favicons/favicon-32x32.png"> <!-- некоректный путь -->
+    <link rel="icon" type="image/png" sizes="16x16" href="img/favicons/favicon-16x16.png"> <!-- некоректный путь -->
+    <link rel="manifest" href="assets/img/favicons/site.webmanifest"> <!-- некоректный путь -->
     <link rel="mask-icon" href="img/favicons/safari-pinned-tab.svg" color="#5bbad5">
     <meta name="msapplication-TileColor" content="#da532c">
     <meta name="theme-color" content="#ffffff">
@@ -35,8 +35,39 @@
 </head>
 
 <body>
+<!--
+Мои коментарии удаляются после исправления !
+  + PixelPerfect :
+    - один из лучших PixelPerfect - 90% совпадение
+  + Адаптив:
+    - хорошо
+  + cod-style:
+    - испоьзуй выравнивание кода
+  + БЕМ :
+    - В названиях классов - нужно учитывать что они буду переиспользоватся тобой и твоими колегами.
+      И старатся называть класс одним словом без разделителей. @Info: https://ru.bem.info/methodology/quick-start/
+      Класс должен отвечать на вопрос "кто ты? / что это?" и без лишних приставок
+  + other :
+    - помимо svg - попробуй использовать библиотеку иконок(https://habr.com/ru/company/edison/blog/481420/)
+    - в каждом проекте должен быть .gitignore также считается плохим тоном если в репозиторий попадают системные настройки
+     или твоего редактора (.vscode) Используй .gitignore @Info: https://tyapk.ru/blog/post/gitignore
+    - подключение шрифтов должно быть отдельным файлом
+    -
+-->
     <div class="page">
         <header class="header">
+            <!--
+              + PixelPerfect :
+                - все прекрассно, положение поисковой строки сильно выбивается
+              + Адаптив:
+                - Ета секция прекрассно адаптирована
+              + БЕМ :
+                - "header__wrapper__search" "header__btm__logo" ито му подобные - названия ничего общего с БЕМ не имеют
+                    Название "header__wrapper__search" нужно было разделять на БЛОК и ЕЛЕМЕНТ. Тоесть должно было получится
+                        "header__wrapper search" и дальше "search__logo", "search__p" без "header__wrapper"
+              + other :
+                - безполезные коменты /.Header__wrapper__search - они не нужны.
+             -->
             <div class="burger__wrapper">
                 <div class="burger" type="button">
                     <span class="burger__line">1</span>
@@ -106,6 +137,23 @@
         </header>
 
         <section class="section-2" id="choose">
+            <!--
+              + PixelPerfect :
+                - все прекрассно, текст отличался -  ну то мелочи.
+              + Адаптив - Так себе, впервую очередь начал ужимать контент.
+                    Хотя у тебя по сторонам Куча свободного безполезного пространства. В первую очередь его ужимай,
+                     и только потом контент
+                 - после 1300 - кнопка начала выбиватся из дизайна и текст уже ужато выглядит
+                 - после 1040 - перестроение блоков нормальное, только тест между картинками как будто зажат. Больше свободы ему.
+              + cod-style:
+                - испоьзуй выравнивание кода
+                - семантика
+              + БЕМ :
+                - "section-2__article__text__items__h1" "section-2__article__text__items__p" ито му подобные
+                    Названия ничего общего с БЕМ не имеют. Нужно было разделять на БЛОК и ЕЛЕМЕНТ.
+              + other :
+                - что за article внутри article => @Info: https://developer.mozilla.org/ru/docs/Web/HTML/Element/article
+             -->
             <article class="section-2__article">
                 <article class="section-2__article__text">
                     <div class="section-2__article__text__items">
@@ -114,6 +162,7 @@
                             Tion and dislike men who are sobeguiled and demoralized bydesire by the charms of pleasureof
                             the moment, so blinded bydesire, that they cannot foresee
                             <p>
+                        <!--Авто Выравнивание -->
                                 <p class="section-2__article__text__items__p">
                                     Ddislike men who are so beguiledand demoralized by the charms ofpleasure of the
                                     moment, soblinded by desire, that.
@@ -131,6 +180,7 @@
 
 
         <section class="section-2-media">
+            <!-- Нужно было не создавать новый, блок а издеватся над старым. -->
             <article class="section-2-media__article__mix">
                 <h1 class="section-2-media__article__mix__h1">Why Choose Us</h1>
                 <div class="section-2-media__article__mix__items">
@@ -153,6 +203,15 @@
         </section><!-- /.Section-2-media -->
 
         <section class="section__icons">
+            <!--
+              + PixelPerfect :
+                - все прекрассно
+              + Адаптив :
+                - Хорошо
+              + БЕМ : нехочу повторятся
+              + other :
+                - отрицательный марджен не там.
+             -->
             <div class="section__icons__item">
                 <svg class="section__icons__item-svg" width="56.531" height="56.531" viewBox="0 0 56.531 56.531">
                     <path
@@ -185,6 +244,13 @@
 
 
         <section class="section-3" id="travel">
+            <!--
+              + PixelPerfect :
+                - все прекрассно
+              + Адаптив :
+                - Ето издевательство - (max-width: 1040px) and (max-width: 850px) and (max-width: 650px)
+                Есть такой прекрасный стил max-width - почитай
+             -->
             <figure class="section-3__modal">
                 <div class="section-3__modal__content">
                     <p class="section-3__modal__content__small-title">Spain</p>
@@ -198,6 +264,9 @@
         </section><!-- /.Section3 -->
 
         <section class="section-3">
+            <!--
+              +  все тоже что и с предведушим
+             -->
             <figure class="section-3__modal section-3--modal-right">
                 <div class="section-3__modal__content">
                     <p class="section-3__modal__content__small-title">Spain</p>
@@ -211,6 +280,14 @@
         </section><!-- /.Section-3 -->
 
         <section class="section-last" id="do">
+            <!--
+              + PixelPerfect :
+                - все прекрассно
+              + Адаптив :
+                - Нестоило сразу переставлять блоки. Можно было еще на резиновой верске хорошо адаптировать.
+                - Парень искажается - адаптировать картинку
+                - Текстовый блок можно было сделать резиновым. Текст удевительно-прекрасно в 90% адаптируется
+             -->
             <figure class="section-last__container">
                 <h3 class="section-last__container__title">What Our Tourist Say</h3>
                 <div class="section-last__container__item">
@@ -237,6 +314,7 @@
             <p class="footer__p">Safe Travel Anywhere</p>
             <div class="footer__icons">
                 <a href="#">
+                    <!-- два класса -->
                     <svg class="facebook" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
                         stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
                         class="feather feather-facebook">
