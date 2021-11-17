@@ -1,0 +1,237 @@
+// Task 1
+
+//Подсчитать сумму всех чисел в заданном пользователем диапазоне.
+
+/*let v1 = Number(prompt ("Enter number from 2 to 10!"));
+console.log("v1", v1);
+let v2 = Number(prompt ("Enter number from 2 to 10!"));
+console.log("v2", v2);
+if (v1 > v2) {
+    let v4 = v1;
+    v1 = v2;
+    v2 = v4;
+}
+
+let v3 = null;
+for (let i = v1; i <= v2; i++) {
+    console.log(i);
+    v3 = i + v3;
+}
+
+console.log("v3", v3);*/
+
+
+// Task2 ========================
+
+//Запросить 2 числа и найти только наибольший общий делитель.
+
+// Variant 1
+
+/*let p1 = prompt ("Enter number 1");
+        let p2 = prompt ("Enter number 2");
+        let min = p1 < p2?p1:p2;
+        let arr1 = [];
+        for (let index = 0; index <= min; index++) {
+            if ((0===(p1 % index)) && (0===(p2 % index))){
+                arr1.push(index);
+            }
+        }
+        console.log(arr1);
+
+        let s = Math.max.apply(null, arr1);
+        console.log (s);*/
+
+// Variant 2
+
+   let p1 = prompt("Enter number 1");
+   let p2 = prompt("Enter number 2");
+   for (let index = p1; index <= p1; index--) {
+       if(p1 % index == 0 && p2 % index ==0) {
+           alert(`${index}`);
+           break;
+       }
+   }
+
+
+//Task 3 ================
+
+//Запросить у пользователя число и вывести все делители этого числа.
+
+/*let numb = prompt("Enter the number!");
+for (let devider = 1; devider <= 100; ++devider) {
+    if(numb % devider == 0) {
+        console.log (devider);
+    }
+}*/
+
+// Task 4 ===========
+
+//Определить количество цифр в введенном числе.
+
+/*let numb1 = prompt("Введите  число :");
+function getDigitAmount(n) {
+    let c = 0;
+   while(c < n.length) c++;
+    return c;
+}
+alert( getDigitAmount(numb1));*/
+
+
+//Task 5==================================
+/*Запросить у пользователя 10 чисел и подсчитать, сколько он ввел положительных, отрицательных и нулей. При этом также посчитать, сколько четных и нечетных. Вывести статистику на экран. Учтите, что достаточно одной переменной (не 10) для ввода чисел пользователем. Решили с Игорем */
+
+
+
+            /*let positiveNumberCount = 0, negativeNumberCount = 0, zeroNumberCount = 0, evenNumbers = 0, oddNumbers = 0;
+            let N = prompt('Введите 10 чисел через пробел: ');
+            let strings = N.split(' ');
+
+            for (let i = 0; i < strings.length; i++) {
+                debugger
+                let num = parseInt(strings[i]);
+                if (num > 0) {
+                    positiveNumberCount++;
+                } else if (num < 0) {
+                    negativeNumberCount++;
+                } else if (num === 0) {
+                    zeroNumberCount++;
+                }
+                debugger
+                if (num % 2 === 0) {
+                    evenNumbers++;
+                }
+                else {
+                    oddNumbers++;
+                }
+
+            }
+
+            console.log('Количество положительных: ', positiveNumberCount );
+            console.log('Количество отрицательных: ', negativeNumberCount );
+            console.log('Количество чисел равных 0: ', zeroNumberCount );
+            console.log('Количество чётных чисел: ', evenNumbers );
+            console.log('Количество нечётных чисел: ', oddNumbers );
+
+======================================== End Task 5 ======================================
+
+=================== Task 6 ============================
+/*=======Зациклить калькулятор. Запросить у пользователя 2 числа и знак, решить пример, вывести результат и спросить, хочет ли он решить еще один пример. И так до тех пор, пока пользователь не откажется.========*/
+
+
+                let questionNumber = -1;
+                let userCounted_N_Times = null;
+                for (let i = 0; i > questionNumber; i++) {
+                    if (userCounted_N_Times) {
+                        const isRepeat = confirm(`repeat calculations ?`);
+                        if (!isRepeat){
+                            break;
+                        }
+                    }
+                    const first = Number(prompt("Enter first number"));
+                    let operator = prompt("What to do with numbers ?");
+                    const second = Number(prompt("Enter second number"));
+                    let result = null;
+                    userCounted_N_Times++;
+                    switch (operator) {
+                        case '+' :
+                            result = first + second;
+                            break;
+                        case '-' :
+                            result = first - second;
+                            break;
+                        case '/' :
+                            result = first / second;
+                            break;
+                        case '*' :
+                            result = first * second;
+                            break;
+                        case '%' :
+                            result = first % second;
+                            break;
+                        default:
+                            alert('this isn\'t correct operator');
+                            continue;
+                    }
+                    alert(`result = ${result}`);
+                }
+                console.log(`пользовател посчитал ${userCounted_N_Times} раз`);
+
+
+//Task 7
+/*Запросить у пользователя число и на сколько цифр его сдвинуть. Сдвинуть цифры числа и вывести результат (если число 123456 сдвинуть на 2 цифры, то получится 345612).
+Ошибка - неправильный сдвиг!*/
+                /*const first = prompt("Enter number");
+    const second = Number(prompt("Enter move count number"));
+    let result = first.slice(second, first.length);
+    alert(`
+        Строка: ${first}
+        шаг: ${second}
+        Результат: ${result}
+    `)
+//End Task7=========================*/
+
+// ======= Task 8 ==========
+/* Зациклить вывод дней недели таким образом: «День недели. Хотите увидеть следующий день?» и так до тех пор, пока пользователь нажимает OK.*/
+
+/*const daysOfWeek = [
+    "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday",
+];
+for (let i = 0; i < daysOfWeek.length; i++) {
+    const isNextDay = confirm(`День недели ${daysOfWeek[i]}. Хотите увидеть следующий день?`);
+    if (!isNextDay) {
+        break;
+    }
+    if (i === (daysOfWeek.length - 1)) {
+        i = -1;
+    }
+}*/
+/* ============== end  #8 ==========================*/
+
+/* ============== start  #9 ========================== *
+document.body.innerHTML = `
+    Задание #9
+    <br> Вывести таблицу умножения для всех чисел от 2 до 9. Каждое число необходимо умножить на числа от 1 до 10.
+`;*/
+/*for (let i = 2; i < 10; i++) {
+    console.log(`Умножение на  ${i}`);
+    for (let j = 1; j <= 10; j++) {
+        console.log(`${i} * ${j} = ${i*j}`);
+    }
+}*/
+
+
+ /* ============== start  #10 ========================== *
+    document.body.innerHTML = `
+        Задание #10. Игра «Угадай число».
+        <br> Предложить пользователю загадать число от 0 до 100 и отгадать его следующим способом:
+        <br>каждую итерацию цикла делите диапазон чисел пополам, записываете результат в N и спрашиваете у пользователя «Ваше число > N, < N или == N?».
+        <br>В зависимости от того, что указал пользователь, уменьшаете диапазон. Начальный диапазон от 0 до 100, поделили пополам и получили 50.
+        <br>Если пользователь указал, что его число > 50, то изменили диапазон на от 51 до 100. И так до тех пор, пока пользователь не выберет == N.
+    `;*/
+    /*let min = 0;
+    let max = 100;
+    let result = max / 2;
+    let step = 1;
+    do {
+        if (max - min === 1){
+            alert(`А других цифр больше нету. Значит твой выбор был ${min} или ${max}`);
+            break;
+        }
+        let isContinue = confirm('Это ваше число ' + result + '?');
+        if (isContinue) {
+            alert(`Ура! Я угадал твое число за ${step} шагов`);
+            break;
+        } else {
+            step = step + 1;
+            let isMore = confirm('Число больше ' + result + '?');
+            if (isMore) {
+                min = result;
+            } else {
+                max = result;
+            }
+            result = Math.floor((min + max) / 2);
+            console.log(`min = ${min}; max = ${max}; result = ${result}`);
+        }
+    } while (true);*/
+
+

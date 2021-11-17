@@ -1,0 +1,178 @@
+"use strict";
+
+//========== Task 1 =============
+
+/*let edge = prompt('Какой у вас возраст?');
+
+   if ( edge > 0 && edge <= 12) {
+            console.log("ребёнок");
+   };
+   if ( edge > 12 && edge <= 18) {
+            console.log("подросток");
+   };
+   if ( edge > 18 && edge < 60) {
+            console.log("взрослый");
+   };
+   if (edge >= 60) {
+            console.log("пенсионер");
+   };*/
+
+
+   //============ Task 2 =============
+
+  /* let symbol = prompt('Введите, пожалуйста, цмфру от "0" до "9"!');
+
+   switch (Number(symbol)) {
+        case (symbol = 0):
+        console.log("=")
+        break;
+        case (symbol = 1):
+        console.log("!")
+        break;
+        case (symbol = 2):
+        console.log('""')
+        break;
+        case (symbol = 3):
+        console.log("§")
+        break;
+        case (symbol = 4):
+        console.log("$")
+        break;
+        case (symbol = 5):
+        console.log("%")
+        break;
+        case (symbol = 6):
+        console.log("&")
+        break;
+        case (symbol = 7):
+        console.log("/")
+        break;
+        case (symbol = 8):
+        console.log("(")
+        break;
+        case (symbol = 9):
+        console.log(")")
+        break;
+   }
+*/
+
+// =========== Task 3 ==============
+
+/*let number = prompt( 'Введите трехзначное число!', 0);
+let number1 = parseInt(number / 100); /*Функция parseInt() принимает строку в качестве аргумента и возвращает целое число в соответствии с указанным основанием системы счисления.
+let number2 = parseInt(number / 10) % 10;
+let number3 = number % 10;
+if(number1===number2 && number2===number3 && number1===number3)
+alert('Найдено совпадение цифр');
+else
+alert('Совпадений не найдено');*/
+
+//let leapYear =
+
+//let sign = window.prompt('Are you feeling lucky', 'sure'); Разница между prompt and window.prompt?
+
+//========== Task 4 ==========
+
+/*let year = prompt ('Enter any year', 0);
+if (year%4 == 0 && year %100 !== 0)
+    alert('Leap Year!');
+else
+    alert('Not Leap Year');*/
+
+ //========== Task 5 ==========
+
+/*let number = prompt ('Enter the number from 10000 to 99999!', 0);//split, join откуда он знает, Сколько символов?
+number = number + '';
+if (number === number.split('').reverse().join(''))
+   alert('Palindrome!!!:)')
+else
+   alert('NOT palindrome!:(');*/
+
+ //========== Task 6 ==========
+
+/*let amount = prompt ('Enter your USD amount!', 0);
+let currency = prompt ('EUR = EUR, UAH = UAH, AZN = AZN', 0);
+switch(currency) {
+    case 'EUR':
+       console.log(amount*0.89 + 'EUR');
+       break;
+    case 'UAH':
+        console.log(amount*25.90 +'UAH');
+        break;
+    case 'AZN':
+        console.log(amount*1.69 +'AZN');
+        break;
+};*/
+
+ //========== Task 7 ==========
+
+ /* let purchaseAmount = prompt ('Enter your amount of purchase!');
+ if (purchaseAmount >= 200 + '€' && purchaseAmount <= 300 + '€') {
+    console.log(purchaseAmount = purchaseAmount - purchaseAmount * 0.03 + '€');
+ }
+ else if (purchaseAmount > 300 + '€' && purchaseAmount <= 500 + '€') {
+    console.log(purchaseAmount = purchaseAmount - purchaseAmount * 0.05 + '€');
+ }
+ else if (purchaseAmount > 500 + '€') {
+    console.log(purchaseAmount = purchaseAmount - purchaseAmount * 0.07 + '€');
+ };*/
+
+ //========== Task 8 ==========
+
+/* let circleLength = prompt('Enter the circle length!');
+ let squarePerimeter = prompt('Enter the Perimeter of square!');
+ if (circleLength / 3.14 < squarePerimeter / 4)
+     alert ('Окружность помещается в круг!')
+ else
+     alert ('Окружность не помещается в круг.');*/
+
+
+//========== Task 9 ==========
+
+/* let capital = prompt('What is the capital of Great Britain? 1 - London 2 - New York 3 - Paris');
+    let currency = prompt('What is the currency of the USA? 1 - USD 2 - UAH 3 - RMB');
+    let country = prompt('What is the most populated country? 1 - the USA 2 - Japan 3 - China');
+    let score = 0;
+    if (capital == 1)
+        score += 2;
+    if (currency == 1)
+        score += 2;
+    if (country == 3)
+        score += 2;
+    alert('Your score is ' + score);*/
+
+    //========== Task 10 ==========
+
+    /*let date = prompt('Enter the date - day-month-year ');
+    date = date.split('-');
+    let oldDate = new Date(date[2], date[1]-1, date[0]); //месяцы начинаются с 0
+    oldDate.setDate(oldDate.getDate()+1);
+    alert(oldDate);*/
+// /Homework 28 lesson =============================================
+
+/*const asd = ['aa', 'bbb', 'cccc', 'ddddd'];
+
+for (let i = 0; i < asd.length; i++) {
+    console.log(asd[i].length);
+};
+
+Math.max([2, 3, 5, 6, 8])
+
+const ssss*/
+
+//==================================================
+
+/*prompt ()
+for (let i = prompt ("Enter from 2 to 5"); i<5; i++) {
+    console.log(i);
+}*/
+
+
+
+
+
+
+
+
+
+
