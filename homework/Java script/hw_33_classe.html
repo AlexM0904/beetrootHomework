@@ -73,7 +73,74 @@ class Ring {
   // Продемонстрировать работу написанных методов.
   //-------------------------------------------------------------------------------------------
 
+  // ============================ I Variant =======================
+
   class Marker {
+
+constructor(color, quantity) {
+    this.color = color;
+    this.quantity = quantity;
+}
+
+print (text){
+        let canPrint = [];
+        for (let i = 0; i < text.length; i++) {
+            if (this.quantity > 0) {
+                if (text[i] == ' ') {
+                    canPrint.push(text[i])
+                } else if (text[i] != ' ') {
+                    canPrint.push(text[i]);
+                    this.quantity = this.quantity - 1;
+                }
+            }
+
+            }
+
+        return canPrint.join('') + ' ' + ' text color ' + this.color;
+}
+}
+const plainMarker = new Marker ('Green', 5);
+console.log(plainMarker.print('te xt 001'));
+class FillMarker extends Marker {
+constructor(color, quantity) {
+    super(color, quantity);
+}
+fill(rivenDozapravki) {
+this.quantity = this.quantity + rivenDozapravki
+
+}
+}
+let fillMarker1 = new FillMarker ('Red',24)
+console.log (fillMarker1)
+fillMarker1.fill(26);
+console.log (fillMarker1)
+
+// function printText(text, color) {
+//     console.log(text + color)
+// }
+// printText('dsdsdsdsd', '    red');
+// function check(text) {
+//     let inkLvl = 4;
+//     let canPrint = [];
+//     for (let i = 0; i < text.length; i++) {
+//         if (inkLvl > 0) {
+//             if (text[i] == ' ') {
+//                 canPrint.push(text[i])
+//             } else if (text[i] != ' ') {
+//                 canPrint.push(text[i]);
+//                 inkLvl = inkLvl - 1;
+//             }
+//         } else if (text[i] == ' ') {
+//             canPrint.push(text[i]);
+//         }
+//     }
+//     return canPrint;
+// }
+// console.log(check('ab cd  g'))
+
+// ======================== II Variant ======================================
+
+  /* class Marker {
     constructor(c, p) {
       this.c = c;
       this.p = p;
@@ -121,7 +188,9 @@ class Ring {
   const l = `List of Software Inc. workers with names, positions, departments, salaries. Best Regards Jeremy Clarkson - HR Manager of the HR Department`;
 
   marker.print(l);
-  document.body.setAttribute("style", "font-size: 18px; text-align: center;");
+  document.body.setAttribute("style", "font-size: 18px; text-align: center;"); */
+
+
   // Реализовать класс Employee, описывающий
   // работника, и создать массив работников банка.
 
@@ -134,7 +203,7 @@ class Ring {
   // вывести на экран результат
   // работы метода getHtml().
 
-  const mainDiv = document.getElementById("content");
+  /* const mainDiv = document.getElementById("content");
 
   const tableDiv = document.createElement("div");
   tableDiv.setAttribute("id", "content__tableDiv");
@@ -266,7 +335,7 @@ class Ring {
   }
   const tableObj = new EmpTable(arrEmp);
   tableObj.getHtml();
-
+ */
 </script>
 
 

@@ -32,17 +32,32 @@ let merc =
     "averageSpeed": "150km/h"
 };
 
-console.log(merc);
+let prop = [merc];
+
+/* console.log(merc);
 console.log(merc["year of issue"]);
 console.log(Object.keys(merc));
-
-for(let key in merc) {
-    console.log(
-
-
-    )
+ */
+function mercInfo(prop) {
+    for (let prop in merc) {
+  console.log(prop + " = " + merc[prop]);
+    }
+    return prop
 }
 
+mercInfo(prop);
+
+//Функция для подсчета необходимого времени для преодоления переданного расстояния со средней скоростью.
+let distance = Number(prompt ("Сообщите расстояние!"));
+let speed = Number(prompt ("Сообщите среднюю скорость, с которой вы хотите ехать!"));
+let time = distance/speed;
+
+function DistanceSpeed (time) {
+
+    return time
+}
+
+console.log(time);
 
 
 /*function carInformation (list)
