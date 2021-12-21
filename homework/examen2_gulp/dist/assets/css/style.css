@@ -1157,7 +1157,7 @@ textarea {
 .news {
     padding: 130px 80px 54px;
     min-height: 100vh;
-    background: url(/assets/images/news/Background.png);
+    background: url(../images/news/Background.png);
     font-size: 21px;
     background-position: center;
     background-repeat: no-repeat;
