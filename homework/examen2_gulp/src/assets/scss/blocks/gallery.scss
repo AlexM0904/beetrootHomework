@@ -1,0 +1,119 @@
+.gallery {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 139px 80px;
+    //min-height: 100vh;
+
+    background-color: $white;
+    font-size: 21px;
+    //  background-color: #cccccc;
+
+    @include respond-to('lg') {
+        padding: 70px 40px;
+    }
+
+    @include respond-to('md') {
+        padding: 30px 20px;
+    }
+
+    &__h2-title {
+        display: block;
+        margin-bottom: 61px;
+        text-align: center;
+        line-height: 2.5;
+        font-family: Montserrat;
+        font-size: 44px;
+        text-transform: uppercase;
+        color: $gray;
+        font-weight: 700;
+        position: relative;
+
+        &::before {
+            display: block;
+            left: 50%;
+            content: "";
+            position: absolute;
+            width: 100px;
+            height: 1px;
+            background-color: $gray;
+
+            transform: translateX(-50%);
+
+            box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+
+            &:hover {
+                background-color: red;
+            }
+        }
+
+        @include respond-to('md') {
+            margin-bottom: 30px;
+            font-size: 30px;
+        }
+    }
+}
+
+.grid {
+    display: grid;
+    width: 82%;
+    max-width: 100%;
+    margin: 0 auto 60px;
+    gap: 10px;
+
+    grid-template-areas:
+        "grid__big grid__big grid__1 grid__2"
+        "grid__big grid__big grid__3 grid__4"
+    ;
+
+}
+
+.grid__big {
+    grid-area: grid__big;
+    height: auto;
+    //object-fit: cover;
+    //background-color: #000;
+}
+
+.grid__1 {
+    grid-area: grid__1;
+    height: auto;
+    //object-fit: cover;
+    //background-color: #000;
+}
+
+.grid__2 {
+    grid-area: grid__2;
+    height: auto;
+    //object-fit: cover;
+    //background-color: #000;
+}
+
+.grid__3 {
+    grid-area: grid__3;
+    height: auto;
+    //object-fit: cover;
+    //background-color: #000;
+}
+
+.grid__4 {
+    grid-area: grid__4;
+    height: auto;
+    //object-fit: cover;
+    //background-color: #000;
+}
+
+.grid__big__img,
+.grid__1__img,
+.grid__2__img, .grid__3__img,
+.grid__4__img {
+    display: block;
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.center {
+    display: block;
+    margin: 0 auto;
+}

@@ -1,0 +1,36 @@
+.section1 {
+    width: 100%;
+    padding-top: 102px;
+    padding-bottom: 92px;
+    font-size: 20px;
+    background-color: $white;
+}
+
+.h2-title {
+    display: block;
+    margin-bottom: 70px;
+    text-align: center;
+    line-height: 2.5;
+    font-family: Montserrat;
+    font-size: 44px;
+    color: $gray;
+    font-weight: 700;
+    position: relative;
+
+    &::before {
+        display: block;
+        left: 50%;
+        content: "";
+        position: absolute;
+        width: 100px;
+        height: 2px;
+        background-color: $gray;
+
+        transform: translateX(-50%);
+    }
+
+    @include respond-to('lg') {
+        margin-bottom: 0;
+    }
+}
+

@@ -1,0 +1,234 @@
+.header {
+    display: flex;
+    top: 0;
+    padding: 0 30px;
+    width: 100%;
+    height: 100px;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    background-color: transparent;
+    transition: background-color .5s linear;
+    z-index: 1;
+
+    @include respond-to('xl') {
+        justify-content: space-between;
+    }
+
+    @include respond-to('lg') {
+        justify-content: space-evenly;
+        height: 70px;
+    }
+
+    @include respond-to('sm') {
+        padding-right: 10px;
+        justify-content: unsafe;
+    }
+
+}
+
+.header-fixed {
+    position: fixed;
+    z-index: 100;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    background-color: $color-icons;
+}
+
+.logo {
+    width: 15.3%;
+    flex-shrink: 0;
+    opacity: 0.8;
+
+    transition: opacity .1s linear;
+
+    @include respond-to('xl') {
+        width: 25%;
+    }
+
+    @include respond-to('md') {
+        width: 40%;
+    }
+
+    /* @include respond-to('sm') {
+        display: none;
+    } */
+}
+
+.logo:hover {
+    opacity: 1;
+}
+
+.nav {
+    display: flex;
+    width: 28.5%;
+    margin: 0 160px;
+
+    @include respond-to('xl') {
+        margin: 0 80px;
+    }
+
+    @include respond-to('lg') {
+        display: none;
+        width: 100%;
+        min-height: calc(100vh - 170px);
+        flex-direction: column;
+
+        background: linear-gradient(45deg, rgba(85, 183, 255, .9), rgba(126, 90, 255, .8));
+        position: absolute;
+        top: 0;
+        left: -100px;
+        right: 0;
+        z-index: 1;
+
+        transform: translateX(107%);
+        transition: transform .2s ease-out;
+
+        &.show {
+
+            display: block;
+            transform: translateX(2%);
+
+        }
+    }
+}
+
+.nav__link {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    flex-basis: fit-content;
+    flex-shrink: 0;
+    margin-right: 15.5%;
+    font-family: Source Sans Pro;
+    font-size: 0.67em;
+    color: $white;
+    text-decoration: none;
+
+    transition: text-decoration .5s linear;
+
+    &:hover {
+        text-decoration: underline;
+    }
+
+    &::before {
+        content: "";
+        display: block;
+        width: 14px;
+        height: 14px;
+        margin-right: 10px;
+        border: 1px solid $white;
+        border-radius: 50%;
+    }
+
+    @include respond-to('lg') {
+        font-size: 30px;
+        padding: 15px 0 15px 25px;
+    }
+}
+
+
+
+// ================ Burger =================
+
+.burger {
+    display: none;
+    padding: 0;
+    background: none;
+    width: 30px;
+    height: 23px;
+    border: none;
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: 1;
+
+    font-size: 0;
+    color: transparent;
+
+    &:focus {
+        outline: none;
+    }
+
+    @include respond-to('lg') {
+        display: block;
+
+        &__line {
+            display: block;
+            width: 30px;
+            height: 2px;
+            margin: 3px 0;
+
+            background-color: $white;
+            transition: transform .5s ease-out;
+
+            &:nth-child(1) {
+                width: 20px;
+                transform: translateX(10px);
+            }
+        }
+
+        &.active &__line {
+            margin: 0;
+        }
+
+        &.active &__line:nth-child(1),
+        &.active &__line:nth-child(3) {
+            display: none;
+        }
+
+        &.active &__line:nth-child(2) &.active &__line:nth-child(4) {
+            margin: 0;
+            position: absolute;
+            left: 0;
+            top: 50%;
+
+            transform-origin: center;
+
+        }
+
+        &.active &__line:nth-child(2) {
+            transform: rotate(45deg);
+            z-index: 1;
+        }
+
+        &.active &__line:nth-child(4) {
+            transform: rotate(-45deg);
+            z-index: 2;
+        }
+    }
+}
+
+
+
+
+
+// ======== SVG Icons ========
+
+.svg-icon {
+    height: 40px;
+    width: 40px;
+    flex-shrink: 0;
+    margin-right: 10px;
+
+    border: 1px solid rgba($white, 0.7);
+    border-radius: 50%;
+    fill: $white;
+
+    transition: border .8s linear;
+
+    @include respond-to('sm') {
+        height: 30px;
+        width: 30px;
+
+
+    }
+}
+
+.svg-icon:last-child {
+    margin-right: 0px;
+}
+
+.svg-icon:hover {
+    border: 1px solid rgba($white, 0);
+    cursor: pointer;
+}

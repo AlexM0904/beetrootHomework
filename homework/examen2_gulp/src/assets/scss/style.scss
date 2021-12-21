@@ -1,0 +1,39 @@
+@import "vars";
+@import "mixins";
+
+body {
+    background-color: $white;
+    background-color: $white;
+    font-size: 21px;
+    color: white;
+}
+
+body.no-scroll,
+body.show-nav {
+  overflow: hidden;
+}
+
+*,
+*:before,
+*:after {
+  /* что тут делает сброс/нормалайз стилей */
+  box-sizing: border-box;
+}
+
+
+
+@import "blocks/reset.scss";
+@import "blocks/page.scss";
+@import "blocks/header.scss";
+@import "blocks/header-slider.scss";
+@import "blocks/section1.scss";
+@import "blocks/article1.scss";
+@import "blocks/article2.scss";
+@import "blocks/news.scss";
+@import "blocks/gallery.scss";
+@import "blocks/footer.scss";
+@import "slick.scss";
+
+
+
+

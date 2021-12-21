@@ -1,0 +1,198 @@
+.news {
+    padding: 130px 80px 54px;
+    min-height: 100vh;
+
+    background: url(/assets/images/news/Background.png);
+    font-size: 21px;
+    //  background-color: #cccccc;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    @include respond-to('sm') {
+        padding: 60px 10px 30px;
+    }
+
+    &__h2-title {
+        display: block;
+        margin-bottom: 75px;
+        text-align: center;
+        line-height: 2.5;
+        font-family: Montserrat;
+        font-size: 44px;
+        color: $white;
+        font-weight: 700;
+        position: relative;
+
+        &::before {
+            display: block;
+            left: 50%;
+            content: "";
+            position: absolute;
+            width: 100px;
+            height: 1px;
+            background-color: $white;
+
+            transform: translateX(-50%);
+
+            box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+
+            &:hover {
+                background-color: red;
+            }
+        }
+    }
+}
+
+.content-wrapper {
+    display: block;
+    position: relative;
+}
+
+.content__arrow {
+    top: 40%;
+    padding: 0;
+    cursor: pointer;
+    background: none;
+
+    position: absolute;
+    z-index: 2;
+
+    &--prev {
+        left: -50px;
+    }
+
+    &--next {
+        right: -50px;
+    }
+
+    @include respond-to('sm') {
+        display: none;
+    }
+}
+
+.arrow-icon {
+    width: 40px;
+    height: 40px;
+    fill: $white;
+    background-color: transparent;
+    border: 1px solid $white;
+    padding: 5px;
+
+    border-radius: 50%;
+    transition: background-color .5s linear;
+
+    &:hover {
+        background-color: $color-icons;
+    }
+}
+
+.content {
+    display: flex;
+    margin: 0 auto;
+    justify-content: center;
+    padding-bottom: 70px;
+}
+
+    .content__item {
+        display: inline-flex;
+        flex-direction: column;
+        padding-bottom: 30px;
+        margin-right: 30px;
+
+        &:last-child {
+            margin-right: 0;
+        }
+
+        &__image {
+            display: block;
+            width: 100%;
+            height: auto;
+            margin-bottom: 3px;
+            object-fit: cover;
+            //position: absolute;
+            //top: 0;
+        }
+
+        &__inner {
+            width: 370px;
+            padding: 30px 20px;
+            background-color: $white;
+
+            &__title,
+            &__text,
+            &__wrapper__info__name {
+                color: $gray;
+            }
+
+            &__title {
+                margin-bottom: 15px;
+                font-family: Montserrat;
+                font-style: normal;
+                font-weight: bold;
+                font-size: 22px;
+                line-height: 27px;
+            }
+
+            &__text,
+            &__wrapper__info__name {
+                font-family: Open Sans;
+                font-style: normal;
+                font-weight: normal;
+                font-size: 18px;
+                line-height: 25px;
+            }
+
+            &__text {
+                margin-bottom: 39px;
+            }
+
+            &__wrapper {
+                display: flex;
+                align-items: center;
+
+                &__avatar {
+                    border-radius: 50%;
+                }
+
+                &__info {
+                    margin-left: 10px;
+
+                    &__name {
+                        font-family: Montserrat;
+                        margin-bottom: 6px;
+                    }
+
+                    &__date {
+                        font-family: Montserrat;
+                        font-style: normal;
+                        font-weight: normal;
+                        font-size: 14px;
+                        line-height: 17px;
+                        color: $blue;
+                    }
+                }
+            }
+        }
+    }
+
+
+.news__dots {
+    display: flex;
+    justify-content: center;
+}
+
+.news__dots__item {
+    display: block;
+    width: 9px;
+    height: 9px;
+    margin-top: 20px;
+    margin-right: 40px;
+    border: 1px solid $white;
+    border-radius: 50%;
+}
+
+.news__dots__item.active {
+    background-color: $white;
+}
+

@@ -1,0 +1,13 @@
+/*  @media (max-width: 1480px) {
+
+            .article2 {
+                display: flex;
+                justify-content: space-between;
+
+                padding-bottom: 50px;
+
+                &__content {
+            margin-left: 30px;
+        }
+    }
+}  */
