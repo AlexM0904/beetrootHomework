@@ -268,3 +268,9 @@
     }
 
 }
+
+.social-icons.bottom {
+    @include respond-to('md') {
+        margin-top: 50px;
+    }
+}
