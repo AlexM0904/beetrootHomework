@@ -472,7 +472,6 @@ textarea {
 
 @media (max-width: 955px) {
     .nav {
-        display: none;
         width: 100%;
         min-height: calc(100vh - 170px);
         -ms-flex-direction: column;
@@ -485,9 +484,9 @@ textarea {
         z-index: 1;
         -webkit-transform: translateX(107%);
         transform: translateX(107%);
-        transition: -webkit-transform 0.2s ease-out;
-        transition: transform 0.2s ease-out;
-        transition: transform 0.2s ease-out, -webkit-transform 0.2s ease-out;
+        transition: -webkit-transform 1s ease-out;
+        transition: transform 1s ease-out;
+        transition: transform 1s ease-out, -webkit-transform 1s ease-out;
     }
 
     .nav.show {
@@ -646,7 +645,7 @@ textarea {
     padding: 0 13.44% 0;
     margin-top: -100px;
     position: relative;
-    background: linear-gradient(45deg, rgba(85, 183, 255, 0.9), rgba(126, 90, 255, 0.9)), url(/assets/images/header-bg-100.jpg);
+    background: linear-gradient(45deg, rgba(85, 183, 255, 0.9), rgba(126, 90, 255, 0.9)), url(../images/header-bg-100.jpg);
     font-size: 21px;
     background-position: center;
     background-repeat: no-repeat;
@@ -1495,7 +1494,7 @@ textarea {
     top: 34%;
     left: 50%;
     border: 1px solid #2c4058;
-    background-image: url(/assets/images/form/form-background.jpg);
+    background-image: url(../images/form/form-background.jpg);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -1706,7 +1705,7 @@ textarea {
     width: 100%;
     height: auto;
     padding: 126px 25% 209px;
-    background-image: url(/assets/images/bg-footer.png);
+    background-image: url(../images/bg-footer.png);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
